@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration - Library Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .register-container {
+            max-width: 480px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        .register-container h1 {
+            text-align: center;
+            color: #1d3557;
+            margin-bottom: 20px;
+        }
+
+        .register-container label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        .register-container input {
+            width: 100%;
+            padding: 11px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 22px;
+            background: #1d3557;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .register-container button:hover {
+            background: #457b9d;
+        }
+
+        .message {
+            text-align: center;
+            margin: 12px 0;
+            font-weight: bold;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="register-container">
+
+    <h1>Create Account</h1>
+
+    <p id="message" class="message"></p>
+
+    <form action="/librarymanagementweb/register" method="post">
+
+        <label>Full Name</label>
+        <input type="text" name="full_name" required maxlength="100">
+
+        <label>Username</label>
+        <input type="text" name="username" required maxlength="50">
+
+        <label>Email</label>
+        <input type="email" name="email" required maxlength="100">
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" maxlength="20">
+
+        <label>Password</label>
+        <input type="password" name="password"
+               required minlength="6">
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password"
+               required minlength="6">
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <div class="login-link">
+        Already have an account?
+        <a href="login.html">Login Here</a>
+    </div>
+
+    <div class="login-link">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get("error");
+
+    const messages = {
+        invalid: "Invalid registration details.",
+        empty: "Please fill in all required fields.",
+        email: "Please enter a valid email address.",
+        password: "Password must contain at least 6 characters.",
+        mismatch: "Passwords do not match.",
+        exists: "Username or email already exists.",
+        failed: "Registration failed. Please try again."
+    };
+
+    if (error && messages[error]) {
+        document.getElementById("message").textContent =
+            messages[error];
+        document.getElementById("message").style.color = "red";
+    }
+</script>
+
+</body>
+</html>

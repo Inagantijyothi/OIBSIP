@@ -1,0 +1,135 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background: #243b55;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #141e30;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+nav a:hover {
+    color: #ffc107;
+}
+
+.welcome {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    margin-bottom: 25px;
+}
+
+button {
+    background: #243b55;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #141e30;
+}
+
+footer {
+    background: #141e30;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* LOGIN PAGE */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.login-box {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 12px;
+    color: #243b55;
+}
+
+.login-description {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.login-box button {
+    width: 100%;
+    font-size: 16px;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.register-link a {
+    color: #243b55;
+    font-weight: bold;
+    text-decoration: none;
+}
+
